@@ -69,7 +69,6 @@ def downloadUpdate():
 		for u in range(0,len(updates)):
 			ligne=updates[u]
 			ligne=ligne.split('>>')
-			print(ligne)
 
 			try:
 				r=requests.get(ligne[1])
