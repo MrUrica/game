@@ -76,7 +76,11 @@ def downloadUpdate():
 				file_found=False
 
 			if not file_found:
-				print('Erreur dans le téléchargement !')
+				if len(updates)-1==u:
+					print('Mise à jour effectuée !')
+				else:
+					print('Erreur dans le téléchargement !')
+
 				break
 
 			else:
@@ -89,8 +93,5 @@ def downloadUpdate():
 						f.write(r.content)
 
 				del r
-
-		if file_found:
-			print('Mise à jour effectuée !')
 
 checkUpdates()
