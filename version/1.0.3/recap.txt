@@ -1,1 +1,1 @@
-update.py>>https://raw.githubusercontent.com/MrUrica/game/master/version/1.0.3/update.py
+update.py>>https://raw.githubusercontent.com/MrUrica/game/master/version/1.0.3/update.py>> 
