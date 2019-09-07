@@ -1,9 +1,15 @@
 import requests
 from os import getcwd, chdir, remove
 
+
 version='https://raw.githubusercontent.com/MrUrica/game/master/version/last_version'
 url_newver='https://raw.githubusercontent.com/MrUrica/game/master/version/'
-ver=[1,0,3]
+ver=[1,0,0]
+
+def getVersion():
+	global ver
+	num_ver=str(ver[0])+'.'+str(ver[1])+'.'+str(ver[2])
+	return num_ver
 
 def checkUpdates():
 	global version
@@ -63,7 +69,7 @@ def downloadUpdate():
 		del r
 
 		file=open('recap.txt','r')
-		updates=file.read()
+		updates=file.read()    
 		updates=updates.split('\n')
 
 		for u in range(0,len(updates)):
