@@ -1,6 +1,6 @@
 import requests
 from os import getcwd, chdir, remove
-
+import zipfile
 
 version='https://raw.githubusercontent.com/MrUrica/game/master/version/last_version'
 url_newver='https://raw.githubusercontent.com/MrUrica/game/master/version/'
@@ -94,9 +94,22 @@ def downloadUpdate():
 					with open(ligne[0],'wb') as f:
 						f.write(r.content)
 
+					if '.zip' in ligne[0]:
+						with zipfile.ZipFile(ligne[0],'r') as zp:
+							zp.extractall()
+
+						remove(ligne[0])
+
+
 				else:
 					with open(ligne[2]+ligne[0],'wb') as f:
 						f.write(r.content)
+
+					if '.zip' in ligne[0]:
+						with zipfile.ZipFile(ligne[2]+ligne[0],'r') as zp:
+							zp.extractall()
+
+						remove(ligne[2]+ligne[0])
 
 				del r
 
