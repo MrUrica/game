@@ -107,7 +107,7 @@ def downloadUpdate():
 
 					if '.zip' in ligne[0]:
 						with zipfile.ZipFile(ligne[2]+ligne[0],'r') as zp:
-							zp.extractall()
+							zp.extractall(ligne[2])
 
 						remove(ligne[2]+ligne[0])
 
