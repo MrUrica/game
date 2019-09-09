@@ -1,0 +1,1 @@
+update.py>>https://raw.githubusercontent.com/MrUrica/game/master/version/1.0.1/update.py>>
